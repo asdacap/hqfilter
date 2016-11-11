@@ -2,8 +2,9 @@
 
 Hacky-Query-Filter is a rails controlller concern which helps with converting controller params to query.
 I extracted this from one of my project, so that I can use it on another project relatively easily.
-By "Hacky", I mean, it is quite a hack. The library assumes that the name of the controller follow
-the same convention as the name of the model.
+By "Hacky", I mean, it is quite a hack. In terms of quality and general use cases..etc. Maybe one day
+I'll make it proper. The library assumes that the name of the controller follow the same convention
+as the name of the model.
 
 # Usage
 
