@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dummy Posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Summary</th>
+      <th>Article</th>
+      <th>Owner</th>
+      <th>Owner Role</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dummy_posts.each do |dummy_post| %>
+      <tr>
+        <td><%= dummy_post.title %></td>
+        <td><%= dummy_post.summary %></td>
+        <td><%= dummy_post.article %></td>
+        <td><%= dummy_post.owner.name %></td>
+        <td><%= add_filter_text "owner[role]", dummy_post.owner.role %></td>
+        <td><%= link_to 'Show', dummy_post %></td>
+        <td><%= link_to 'Edit', edit_dummy_post_path(dummy_post) %></td>
+        <td><%= link_to 'Destroy', dummy_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post', new_dummy_post_path %>

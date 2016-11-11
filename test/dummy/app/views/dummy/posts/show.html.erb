@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @dummy_post.title %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @dummy_post.summary %>
+</p>
+
+<p>
+  <strong>Article:</strong>
+  <%= @dummy_post.article %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @dummy_post.owner %>
+</p>
+
+<%= link_to 'Edit', edit_dummy_post_path(@dummy_post) %> |
+<%= link_to 'Back', dummy_posts_path %>
